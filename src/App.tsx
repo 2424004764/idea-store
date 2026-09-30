@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Sidebar from './components/Sidebar'
 import LibraryPage from './pages/LibraryPage'
+import AuthCallbackPage from './pages/AuthCallbackPage'
 import { useUi } from './store/ui'
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
             element={<LibraryPage collection="uncategorized" />}
           />
           <Route path="/folder/:folderId" element={<LibraryPage collection="folder" />} />
+          <Route path="/auth/callback" element={<AuthCallbackPage />} />
           <Route path="*" element={<LibraryPage collection="all" />} />
         </Routes>
       </main>

@@ -13,6 +13,7 @@ import {
 import type { ItemType } from '../types'
 import { TYPE_META, TYPE_ORDER } from '../lib/typeMeta'
 import { useUi } from '../store/ui'
+import UserMenu from './UserMenu'
 import { cn } from '../lib/utils'
 
 export type TypeFilter = 'all' | ItemType
@@ -162,6 +163,7 @@ export default function TopBar(props: TopBarProps) {
             </button>
           </div>
           <ThemeToggle />
+          <UserMenu />
           <button
             type="button"
             onClick={() => ui.openItemEditor(undefined, { folderId: currentFolderId })}
